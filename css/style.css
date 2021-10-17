@@ -1,0 +1,724 @@
+/* .................................... general .................................... */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  line-height: 1.5;
+  color: #272829;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  padding-left: 30rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+a {
+  color: #149ddd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #37b3ed;
+  text-decoration: none;
+}
+section {
+  padding: 1rem 5%;
+  min-height: 100vh;
+  margin-bottom: 3rem;
+}
+.heading {
+  font-size: 3.5rem;
+  padding-bottom: 1rem;
+  color: #111;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.heading span {
+  color: #149ddd;
+  text-transform: uppercase;
+}
+
+/* ............................... header ...................................... */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #040b14;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  flex-flow: column;
+  padding: 2rem 2rem;
+  width: 30rem;
+}
+header img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+}
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+header h1 a,
+header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+header h1 a span {
+  border-bottom: 2px solid #149ddd;
+  padding-bottom: 5px;
+}
+/* ......................................... social links ................................... */
+header .social-links a {
+  font-size: 16px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+header .social-links a i {
+  margin: 2px 0;
+  color: #149ddd;
+}
+
+header .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
+}
+header .social-links a:hover i {
+  color: #fff;
+}
+/* ................................. navbar .......................................... */
+header .navbar {
+  align-self: start;
+  margin-left: 20px;
+}
+header .navbar * {
+  margin: 0;
+  padding: 0;
+}
+header .navbar ul {
+  list-style-type: none;
+}
+
+header .navbar ul li a {
+  display: flex;
+  align-items: flex-start;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+}
+header .navbar ul li a i {
+  font-size: 20px;
+  color: #6f7180;
+  padding-right: 12px;
+}
+
+.navbar li a:hover {
+  color: #fff;
+  letter-spacing: 0.2rem;
+}
+.navbar li:hover > a i {
+  color: #149ddd;
+}
+.highlight {
+  letter-spacing: 0.2rem;
+  border-left: 5px solid #149ddd;
+  background-color: #252525;
+}
+/* ................................... menu bar ......................................... */
+#menu-bars {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10000;
+  color: #fff;
+  background: #149ddd;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+/* .................................. custom cursor ........................................ */
+/* inner cursor */
+.cursor-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.75rem;
+  width: 0.75rem;
+  background: #ff0055;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10000;
+}
+.cursor-1.active {
+  height: 1rem;
+  width: 1rem;
+  opacity: 0.5;
+}
+/* outer cursor */
+.cursor-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  width: 4rem;
+  border: 0.1rem solid rgb(255, 145, 0);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10000;
+  transition: 0.1s linear;
+}
+.cursor-2.active {
+  display: none;
+}
+/* ........................ main section .......................... */
+.home {
+  background: linear-gradient(rgba(1, 47, 68, 1), rgba(4, 47, 66, 0.3)),
+    url("../images/bg.jpg") top center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.home .profile img {
+  display: none;
+}
+.home .home-content {
+  flex: 1 1 40rem;
+}
+.home .home-content .myname h3 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 3px 3px #000;
+}
+.home .home-content .myname {
+  display: inline-block;
+  position: relative;
+}
+
+.home .home-content .info {
+  color: #eee;
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  padding: 3rem 0 0.5rem 0;
+  text-shadow: 0 2px 2px #000;
+}
+
+.home .home-content .info span {
+  padding-bottom: 5px;
+  border-bottom: 3px solid rgb(20, 157, 221);
+}
+.home .home-content .myname .text {
+  font-size: 2.3rem;
+  font-family: "Poppins", sans-serif;
+  margin: -11px 0 0 0;
+  color: rgb(207, 191, 42);
+  text-shadow: 0 1px 1px #000;
+  font-weight: 600;
+  position: absolute;
+  right: 0;
+}
+.home .home-content .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  background: #149ddd;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.home .home-content .btn:hover {
+  letter-spacing: 0.2rem;
+  background-color: rgb(55, 179, 237);
+}
+.home .myskills {
+  text-align: right;
+  margin: 32px auto;
+  display: block;
+  width: auto;
+  position: absolute;
+
+  right: 20px;
+}
+.home .myskills ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  color: #000;
+  font-weight: bold;
+  font-size: 2rem;
+  display: inline-block;
+  background: linear-gradient(
+    rgba(250, 250, 250, 0.5),
+    rgba(250, 250, 250, 0.5)
+  );
+  box-shadow: 0 0.5rem 3rem #000;
+}
+
+.home .myskills ul li {
+  text-shadow: 1px 1px 1px solid #000;
+  margin: 5px;
+}
+
+.home .myskills ul li i {
+  font-size: 16px;
+  background: #149ddd;
+  color: #000;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+  margin: 1px 0;
+}
+.home .myskills ul li:hover {
+  color: #2c2f3f;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+.home .myskills ul li:hover i {
+  /* background: #149ddd; */
+  color: #fff;
+  text-decoration: none;
+}
+/* ............................. academics section ..................................... */
+.academics .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.academics .box-container .box {
+  position: relative;
+  flex: 1 1 33rem;
+  border-left: 0.2rem solid #149ddd;
+  padding: 0 2rem 2rem 0;
+}
+.academics .box-container .box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: #149ddd;
+}
+.academics .box-container .box .content {
+  background: #e8f4fa;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+.academics .box-container .box .content span {
+  color: #fff;
+  font-size: 1.7rem;
+  background-color: #149ddd;
+  border-radius: 50rem;
+  padding: 0.4rem 1rem;
+}
+.academics .box-container .box .content h3 {
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  color: #111;
+}
+.academics .box-container .box .content p {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* ............................. skill section ......................................... */
+.container-fluid {
+  padding: 2rem 0 1rem 0;
+  background: linear-gradient(135deg, #062f42, #149ddd);
+}
+.skills {
+  min-height: fit-content;
+}
+.skills .skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skills .skills-container > div {
+  background-color: #f8ce42;
+  min-width: 150px;
+  max-width: 150px;
+  margin: 10px;
+  padding: 5px 0;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  border-radius: 0.5rem;
+}
+
+/* ............................. project section ....................................... */
+.project {
+  padding-bottom: 0;
+  background-color: rgb(240, 241, 241);
+}
+.project .section-title p {
+  color: #0e6a94;
+  font-size: 1.6rem;
+}
+.project .project-item {
+  margin-bottom: 30px;
+}
+.project #myBtnContainer .btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0 2px 5px 2px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #149ddd;
+  outline: none;
+  background-color: #fff;
+}
+
+.project #myBtnContainer .btn:hover {
+  padding: 7px;
+  background-color: #149ddd;
+  color: #fff;
+}
+.project #myBtnContainer button:last-child {
+  margin-right: 0;
+}
+.project .project-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 5px solid transparent;
+  margin: 2px;
+  outline: 3px inset #149ddd;
+}
+.project .project-wrap .finished_proj,
+.project .project-wrap .ongoing_proj {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  left: 0;
+  top: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  letter-spacing: 0.2rem;
+}
+.project .project-wrap .finished_proj {
+  background-color: rgba(3, 187, 3, 0.7);
+}
+.project .project-wrap .ongoing_proj {
+  background-color: rgba(255, 108, 9, 0.7);
+}
+.project .project-wrap a {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  display: none;
+  bottom: 0;
+  color: #fff;
+  background-color: #149ddd;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+}
+.project .project-wrap:hover a {
+  display: block;
+}
+.project .project-wrap a:hover {
+  background-color: #37b3ed;
+}
+.project .project-wrap::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.project .project-wrap:hover img {
+  transform: scale(1.2);
+  transition: all ease-in-out 0.5s;
+}
+.row {
+  margin: 10px -16px;
+}
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+.column {
+  display: none; /* Hide all elements by default */
+}
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+.project .container .row #myBtnContainer .btn.clicked {
+  background-color: #149ddd;
+  color: #fff;
+}
+
+/* ............................. about section ......................................... */
+.about {
+  min-height: fit-content;
+}
+.about .row1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+.about .row1 .image {
+  flex: 1 1 25rem;
+}
+.about .row1 .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 1rem solid #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+.about .row1 .content {
+  flex: 1 1 50rem;
+}
+.about .row1 .content h3 {
+  color: #333;
+  font-size: 3rem;
+}
+.about .row1 .content p {
+  color: #666;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+.about .row1 .content .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+.about .row1 .content .box-container .box {
+  flex: 1 1 20rem;
+}
+.about .row1 .content .box-container .box p {
+  font-size: 2rem;
+}
+.about .row1 .content .box-container .box span {
+  color: #149ddd;
+}
+/* ............................... contact section .............................. */
+.contact {
+  background: linear-gradient(#0a597e, rgba(254, 255, 255, 0.3));
+  margin-bottom: 0;
+}
+.contact .row form {
+  flex: 1 1 55rem;
+  margin: 0 10rem;
+  background: #fff;
+  padding: 0 4rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.contact .row form .box,
+.contact .row form textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 0.15rem solid #333;
+  color: #333;
+  text-transform: none;
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  margin: 1rem 0;
+}
+
+.contact .row form .box:focus,
+.contact .row form textarea:focus {
+  border-color: #149ddd;
+}
+
+.contact .row form .box::placeholder,
+.contact .row form textarea::placeholder,
+.contact .row form .btn {
+  text-transform: capitalize;
+}
+
+.contact .row form textarea {
+  height: 20rem;
+  resize: none;
+}
+
+.contact .row form .btn {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  background-color: #149ddd;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+}
+.contact .row form .btn:hover {
+  background-color: #37b3ed;
+  color: #fff;
+}
+
+/*........................ Back to top button ........................ */
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  background: #149ddd;
+  color: #fff;
+  transition: display 0.5s ease-in-out;
+  z-index: 99999;
+  text-align: center;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  position: absolute;
+  top: 7px;
+  left: 12px;
+}
+
+.back-to-top:hover {
+  color: #fff;
+  background: #2eafec;
+  transition: all 0.2s ease-in-out;
+}
+
+/* ........................media queries .......................... */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  body {
+    padding: 0;
+  }
+  #menu-bars {
+    display: initial;
+  }
+  header {
+    left: -120%;
+  }
+  header.active {
+    left: 0%;
+  }
+  .cursor-1,
+  .cursor-2 {
+    display: none;
+  }
+  .home .profile img {
+    margin: 32px auto;
+    display: block;
+    width: 120px;
+    border: 8px solid #2c2f3f;
+    position: absolute;
+    top: 0;
+    left: 70px;
+  }
+  .home {
+    background-attachment: fixed;
+    flex-direction: row;
+  }
+  .myskills ul li {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  header {
+    width: 100%;
+  }
+  .skills .skills-container > div {
+    min-width: 40%;
+    max-width: 40%;
+    margin: 5px;
+    padding: 5px 0;
+    line-height: 75px;
+    font-size: 16px;
+  }
+  .home .home-content .myname,
+  .home .home-content .info {
+    width: 50vw;
+  }
+
+  .project #myBtnContainer .btn {
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 1px 3px 1px;
+  }
+  .about .row1 .image {
+    margin: 0 3rem 0 0;
+  }
+  .home .home-content .myname .text {
+    left: 9rem;
+  }
+}
