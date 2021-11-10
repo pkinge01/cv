@@ -2,6 +2,9 @@
 
 $(document).ready(function () {
   // wait until everything has loaded
+  var inputs = document.querySelectorAll(".box");
+  inputs.forEach((input) => (input.value = ""));
+  
   $(window).scroll(function () {
     var Scroll = $(window).scrollTop() + 1, // finds the distance scrolled from the top
       SectionOneOffset = $("#home").offset().top, //finds the distance between #section-one and the top
