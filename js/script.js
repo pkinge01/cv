@@ -85,6 +85,11 @@ document.querySelectorAll("a").forEach((links) => {
     cursor1.classList.remove("active");
     cursor2.classList.remove("active");
   };
+  let menu = document.querySelector("#menu-bars");
+let header = document.querySelector("header");
+  links.onclick = () => {
+    menu.classList.remove("fa-times");
+  };
 });
 // .................................... project filters ...................................
 filterSelection("all");
