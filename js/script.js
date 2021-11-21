@@ -89,6 +89,7 @@ document.querySelectorAll("a").forEach((links) => {
 let header = document.querySelector("header");
   links.onclick = () => {
     menu.classList.remove("fa-times");
+    header.classList.remove("active");
   };
 });
 // .................................... project filters ...................................
