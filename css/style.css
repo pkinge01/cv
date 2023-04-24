@@ -7,16 +7,9 @@ body {
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize; 
   transition: all 0.2s linear;
   line-height: 1.5;
   color: #272829;
-}
-p{
-  text-transform: lowercase;
-}
-p::first-letter{
-  text-transform: uppercase;
 }
 html {
   font-size: 62.5%;
