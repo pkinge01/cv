@@ -316,6 +316,7 @@ header .navbar ul li a i {
   width: 20px;
   height: 30px;
   margin: 1px;
+  background: #ff0000;
 }
 .home .myskills ul li:hover {
   color: #2c2f3f;
