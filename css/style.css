@@ -300,7 +300,7 @@ header .navbar ul li a i {
   margin: 5px;
 }
 
-.home .myskills ul li i,  .home .myskills ul li .mui{
+.home .myskills ul li i, .home .myskills ul li img{
   font-size: 16px;
   background: #149ddd;
   color: #000;
