@@ -7,10 +7,16 @@ body {
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: capitalize; 
   transition: all 0.2s linear;
   line-height: 1.5;
   color: #272829;
+}
+p{
+  text-transform: lowercase;
+}
+p::first-letter{
+  text-transform: uppercase;
 }
 html {
   font-size: 62.5%;
@@ -299,7 +305,11 @@ header .navbar ul li a i {
   text-shadow: 1px 1px 1px solid #000;
   margin: 5px;
 }
-
+.home .myskills ul li img{
+  padding: 8px 0;
+  width: 20px;
+  height: 30px;
+}
 .home .myskills ul li i, .home .myskills ul li img{
   font-size: 16px;
   background: #149ddd;
