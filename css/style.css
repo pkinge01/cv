@@ -312,6 +312,10 @@ header .navbar ul li a i {
   transition: 0.3s;
   margin: 1px 0;
 }
+.home .myskills ul li img{
+  width: 20px;
+  height: 20px;
+}
 .home .myskills ul li:hover {
   color: #2c2f3f;
   background-color: rgba(255, 255, 255, 0.2);
