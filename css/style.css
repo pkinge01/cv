@@ -298,12 +298,7 @@ header .navbar ul li a i {
   text-shadow: 1px 1px 1px solid #000;
   margin: 5px;
 }
-.home .myskills ul li img{
-  padding: 8px;
-  width: 20px;
-  height: 30px;
-  margin: 1px;
-}
+
 .home .myskills ul li i, .home .myskills ul li img{
   font-size: 16px;
   background: #149ddd;
@@ -315,6 +310,12 @@ header .navbar ul li a i {
   height: 30px;
   transition: 0.3s;
   margin: 1px 0;
+}
+.home .myskills ul li img{
+  padding: 8px;
+  width: 20px;
+  height: 30px;
+  margin: 1px;
 }
 .home .myskills ul li:hover {
   color: #2c2f3f;
